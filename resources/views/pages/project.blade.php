@@ -205,15 +205,15 @@
                             <img src="assets/images/logo-01_45.png">
                         </div>
                         <div class="right">
-                            <h5>Liên hệ tư vấn</h5>
-                            <p>Chuyên viên tư vấn đã sãn sàng hỗ trợ</p>
+                            <h5>Contact for Consultation</h5>
+                            <p>Our consultants are ready to assist</p>
                         </div>
                     </div>
                     <div class="hotline"> <a href="tel:{{$setting->hotline}}"><i class="icon-phone"></i> {{$setting->hotline}}</a> </div>
                 </div>
                 
                 <div class="pupup click_popup">
-                    <a href="javascript:void(0)"><button> <img src="assets/images/icon-document-register.svg"> Đăng ký nhận tài liệu dự án</button></a>
+                    <a href="javascript:void(0)"><button> <img src="assets/images/icon-document-register.svg"> Register to Receive Project Documents</button></a>
                 </div>
             </div>
             
