@@ -55,20 +55,20 @@
                     <li class="breadcrumb-item active" aria-current="page">{{$post->name}}</li>
                 </ol>
                 <div class="sub">
-                    @if($post->monopoly == 1)<span class="bg-secondary">Độc quyền <i class="ms-1 icon-check"></i></span>@endif
-                    @if($post->for_sale == 1)<span class="bg-secondary">Đang mở bán <i class="ms-1 icon-check"></i></span>@endif
-                    @if($post->new_product == 1)<span class="bg-secondary">Mới ra mắt <i class="ms-1 icon-check"></i></span>@endif
+                    @if($post->monopoly == 1)<span class="bg-secondary">Exclusive <i class="ms-1 icon-check"></i></span>@endif
+                    @if($post->for_sale == 1)<span class="bg-secondary">Now Selling <i class="ms-1 icon-check"></i></span>@endif
+                    @if($post->new_product == 1)<span class="bg-secondary">Newly Launched <i class="ms-1 icon-check"></i></span>@endif
                 </div>
             </nav>
             <div class="heading">
                 <div class="left">
                     <h1 class="text-uppercase title-cat">{{$post->name}}</h1>
-                    <div class="address"><i class="icon-location me-1"></i> {{$post->address}}{{ $post->street_id ? ', '.$post->Street->name:'' }}{{$post->ward_id? ', '.$post->Ward->name:''}}{{', '.$post->District->name}}{{', '.$post->Province->name}} <a href="">Xem trên bản đồ</a></div>
+                    <div class="address"><i class="icon-location me-1"></i> {{$post->address}}{{ $post->street_id ? ', '.$post->Street->name:'' }}{{$post->ward_id? ', '.$post->Ward->name:''}}{{', '.$post->District->name}}{{', '.$post->Province->name}} <a href="">View on Map</a></div>
                 </div>
                 <div class="right">
-                    <div class="price"> <span style="font-size: 1.2rem;">Giá: </span>
-                        {{$post->price >= 1000000000?$post->price/1000000000 . ' Tỷ': ($post->price? $post->price/1000000 . ' Triệu':'Liên hệ') }}
-                        {{$post->price_max >= 1000000000? ' - ' . $post->price_max/1000000000 . ' Tỷ':($post->price_max?' - ' . $post->price_max/1000000 . ' Triệu':'')}}
+                    <div class="price"> <span style="font-size: 1.2rem;">Price: </span>
+                        {{$post->price >= 1000000000?$post->price/1000000000 . ' Billion': ($post->price? $post->price/1000000 . ' Million':'Contact') }}
+                        {{$post->price_max >= 1000000000? ' - ' . $post->price_max/1000000000 . ' Billion':($post->price_max?' - ' . $post->price_max/1000000 . ' Million':'')}}
                     </div>
                     <div class="price_acreage">
                         @if($post->unit=='Tỷ')
