@@ -60,13 +60,13 @@
         @csrf
             <input type="hidden" id="current-url" name="url" value="">
             <label>
-                <input type="text" name="name" placeholder="Họ và Tên (*)">
+                <input type="text" name="name" placeholder="Full Name (*)">
             </label>
             <label>
-                <input type="text" name="phone" placeholder="Số điện thoại (*)">
+                <input type="text" name="phone" placeholder="Phone (*)">
             </label>
             <label>
-                <input type="text" name="email" placeholder="Địa chỉ email">
+                <input type="text" name="email" placeholder="Email">
             </label>
             <p class="sub">(*) By clicking on ‘Request a Quote’, you agree to our Privacy Policy.</p>
             <button class="btn btn-circle" type="submit">Send Now</button>
