@@ -159,7 +159,8 @@ class NewsController extends Controller
         $data = $request->all();
         $post = Post::find($id);
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        // $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['name'], '-');
         $post->detail = $data['detail'];
         $post->content = $data['content'];
         $post->category_id = $data['category_id'];

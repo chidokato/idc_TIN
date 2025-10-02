@@ -247,7 +247,8 @@ class PostController extends Controller
         $data = $request->all();
         $post = Post::find($id);
         $post->name = $data['name'];
-        $post->slug = $data['slug'];
+        // $post->slug = $data['slug'];
+        $post->slug = Str::slug($data['name'], '-');
         $post->content = $data['content0'];
         $post->category_id = $data['category_id'];
         
