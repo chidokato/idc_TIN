@@ -49,8 +49,8 @@
                 <div class="widget widget-list mb-3">
                     <!-- <h4><span>Tin tức</span></h4> -->
                     <ul>
-                        <li><a href="tin-thi-truong"><i class="icon-next me-2"></i>Tin thị trường</a></li>
-                        <li><a href="tin-noi-bo"><i class="icon-next me-2"></i>Tin nội bộ</a></li>
+                        <li><a href="market-news"><i class="icon-next me-2"></i>Market News</a></li>
+                        <li><a href="internal-news"><i class="icon-next me-2"></i>Internal News</a></li>
                     </ul>
                 </div>
 
@@ -63,7 +63,7 @@
                         <div class="news-item-captain-img">
                             <div class="news-item-captain-img-wrap">
                                 <img src="assets/images/space-3.gif" style="background-image: url('data/images/{{$val->img}}');" alt="" class="w-100">
-                                <span class="date"><i class="icon-time me-1"></i>2 ngày trước</span>
+                                <span class="date"><i class="icon-time me-1"></i>{{date_format($val->updated_at,"d/m/Y")}}</span>
                             </div>
                         </div>
                         <div class="news-item-captain-body">
@@ -75,7 +75,7 @@
                     <a href="{{$val->category->slug}}/{{$val->slug}}" class="news-item">
                         <span><img src="assets/images/space-3.gif" style="background-image: url('data/images/{{$val->img}}');" alt="" class="w-100"></span>
                         <div class="news-item-body">
-                            <span class="date"><i class="icon-time me-1"></i>2 ngày trước</span>
+                            <span class="date"><i class="icon-time me-1"></i>{{date_format($val->updated_at,"d/m/Y")}}</span>
                             <p class="mb-0 text-truncate-set text-truncate-set-2">{{$val->name}}</p>
                         </div>
                     </a>

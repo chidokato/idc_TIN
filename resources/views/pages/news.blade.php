@@ -19,7 +19,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{asset('')}}">Indochine</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Tin tức</li>
+                        <li class="breadcrumb-item active" aria-current="page">News</li>
                         </ol>
                     </nav>
                 </section>
@@ -31,9 +31,9 @@
                         <div class="col-lg-6">
                             <div class="input-group search-input">
                                 <span class="input-group-text border100"><i class="icon-search"></i></span>
-                                <input type="text" class="form-control" placeholder="Nhập địa chỉ, dự án">
+                                <input type="text" class="form-control" placeholder="Enter keyword">
                             </div>
-                            <button type="submit" class="btn btn-circle">Tìm kiếm</button>
+                            <button type="submit" class="btn btn-circle">Search</button>
                         </div>
                     </div>
                 </form>
@@ -87,9 +87,9 @@
                                     <h5 class="card-title"><a href="{{$val->category->slug}}/{{$val->slug}}">{{$val->name}}</a></h5>
                                     <div class="card-info">
                                         <span><i class="icon-time me-2"></i>{{date_format($val->updated_at,"d/m/Y")}}</span>
-                                        <span><i class="icon-user me-2"></i>{{$val->User->yourname}}</span>
+                                        <span><i class="icon-user me-2"></i>{{$val->User->yourname ? $val->User->yourname : 'User'}}</span>
                                     </div>
-                                    <p class="mb-0 text-truncate-set text-truncate-set-2">Chính chủ cần chuyển nhượng gấp căn 2 ngủ diện tích thông thủy 78m2 full đồ, khách mua chỉ cần dọn quần áo đến có thể ở ngay</p>
+                                    <p class="mb-0 text-truncate-set text-truncate-set-3">{{$val->detail}}</p>
                                 </div>
                             </div>
                         </div>
@@ -104,14 +104,14 @@
                 <div class="widget widget-list mb-3">
                     <!-- <h4><span>Tin tức</span></h4> -->
                     <ul>
-                        <li><a href="tin-thi-truong"><i class="icon-next me-2"></i>Tin thị trường</a></li>
-                        <li><a href="tin-noi-bo"><i class="icon-next me-2"></i>Tin nội bộ</a></li>
+                        <li><a href="market-news"><i class="icon-next me-2"></i>Market News</a></li>
+                        <li><a href="internal-news"><i class="icon-next me-2"></i>Internal News</a></li>
                     </ul>
                 </div>
 
                 
                 <div class="widget widget-list widget-news mb-3">
-                    <h4><span>Tin xem nhiều</span></h4>
+                    <h4><span>Most Viewed News</span></h4>
                     @foreach($posts as $key => $val)
                     @if($key == 0)
                     <a href="{{$val->category->slug}}/{{$val->slug}}" class="news-item-captain">
@@ -123,7 +123,7 @@
                         </div>
                         <div class="news-item-captain-body">
                             <h5>{{$val->name}}</h5>
-                            <p class="mb-0  text-truncate-set text-truncate-set-2">Chính chủ cần chuyển nhượng gấp căn 2 ngủ diện tích thông thủy 78m2 full đồ, khách mua chỉ cần dọn quần áo đến có thể ở ngay</p>
+                            <p class="mb-0  text-truncate-set text-truncate-set-2">{{$val->detail}}</p>
                         </div>
                     </a>
                     @else
