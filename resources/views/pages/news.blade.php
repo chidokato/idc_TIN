@@ -87,7 +87,7 @@
                                     <h5 class="card-title"><a href="{{$val->category->slug}}/{{$val->slug}}">{{$val->name}}</a></h5>
                                     <div class="card-info">
                                         <span><i class="icon-time me-2"></i>{{date_format($val->updated_at,"d/m/Y")}}</span>
-                                        <span><i class="icon-user me-2"></i>{{$val->User->yourname ? $val->User->yourname : 'User'}}</span>
+                                        <span><i class="icon-user me-2"></i>{{ optional($val->User)->yourname ?? 'User' }}</span>
                                     </div>
                                     <p class="mb-0 text-truncate-set text-truncate-set-3">{{$val->detail}}</p>
                                 </div>
