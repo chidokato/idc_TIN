@@ -46,7 +46,7 @@
                     <hr>
                     <h4><span>Province / City</span></h4>
                     @foreach($provinces as $val)
-                        @if(count($val->Post) > 0)
+                        @if(count($val->Post) > 1)
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="provinces[]" value="{{$val->id}}" id="flexCheck{{$val->id}}">
                             <label class="form-check-label aa22" for="flexCheck{{$val->id}}">
