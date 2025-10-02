@@ -9,7 +9,7 @@
 .card-s .card-body {background: #fff;border: 1px solid rgb(0 0 0 / 6%);border-radius:0 0 0.25rem 0.25rem;box-shadow: 0 0 2px rgb(0 0 0 / 10%);font-size: 14px;position: relative;padding: 15px 12px;}
 .card-info {display: flex;align-items: center;justify-content: space-between;/* font-style: italic; */margin-bottom: 8px;color: #888;flex-wrap: wrap;}
 .card-info i {font-size: 18px;margin-right: 6px !important;margin-top: 3px;}
-.card-s .card-title {font-size: 17px;position: relative;margin-bottom: 5px;-webkit-text-stroke-width: 0.25px; font-weight: bold; }
+.card-s .card-title {font-size: 17px;position: relative;margin-bottom: 5px;-webkit-text-stroke-width: 0.1px; font-weight: bold; }
 .card-s .card-title a {display: block;line-height: 1.5; color: var(--main-color);}
 .card-s a {color: #222;}
 .card-s a:hover {color: var(--main-color);}
@@ -123,7 +123,7 @@
 .card-overlay-review {margin-bottom:28px}
 .card-overlay-review .card-overlay-img, .card-overlay-review .card-overlay-img img {border-radius:6px 6px 0 0}
 .card-overlay-review .card-overlay .card-overlay-body {top:initial;background:var(--main-color);padding-top: 18px;border-radius: 0 0 6px 6px;position: relative;}
-.card-overlay-review .card-overlay h5 {margin-bottom: 3px;-webkit-text-stroke-width: 0.25px;}
+.card-overlay-review .card-overlay h5 {margin-bottom: 3px;-webkit-text-stroke-width: 0.1px;}
 .card-overlay-review .card-overlay .card-overlay-body-wrap p {font-size:14px}
 
 .more .btn-plus {position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;background: rgba(0,0,0,.4);}
@@ -198,11 +198,11 @@
     .horizontal-view .card-s .hot {right:initial;left: calc(33.33333333% - 50px);z-index: 3;top: -18px;}
     .horizontal-view .card-s::before {display:none}
     .horizontal-view .card-s:hover {border-color:var(--sub-color)}
-    .horizontal-view .card-s .card-title {-webkit-text-stroke-width: 0.5px;letter-spacing: .2px;}
+    .horizontal-view .card-s .card-title {-webkit-text-stroke-width: 0.1px;letter-spacing: .2px;}
     .horizontal-view .card-s:hover .card-title a {color:var(--main-color)}
     .horizontal-view .card-s .view-more {display: none;}
 
-	.card-s .view-more {right:0;left:0;z-index:8;background-color: var(--sub-color);text-align: center;padding: 4px 12px 6px;color: #fff;width: 100px;margin: auto;top: 0;bottom: 0;height: 32px;opacity: 0;transition:.2s all;-webkit-text-stroke-width: 0.25px;display: block;}
+	.card-s .view-more {right:0;left:0;z-index:8;background-color: var(--sub-color);text-align: center;padding: 4px 12px 6px;color: #fff;width: 100px;margin: auto;top: 0;bottom: 0;height: 32px;opacity: 0;transition:.2s all;-webkit-text-stroke-width: 0.1px;display: block;}
 	.card-s:hover > a .view-more {opacity:1}
 
 }
@@ -224,7 +224,7 @@
 	.grid-view .card-s .cat-link {top:5px}
 	.grid-view .card-contact, .horizontal-view .card-contact {flex:0 0 100%;margin-top: 12px;justify-content: center;/* background-color: #fff; */border-radius: .25rem;border: 1.4px solid var(--main-color);color: var(--main-color);}
 	.grid-view .card-contact i, .horizontal-view .card-contact i {background:none;height: 40px;flex: 0 0 auto;font-size: 20px;color: var(--main-color) !important;}
-	.grid-view .card-contact span, .grid-view .card-info p {display:block;-webkit-text-stroke-width: 0.25px;}
+	.grid-view .card-contact span, .grid-view .card-info p {display:block;-webkit-text-stroke-width: 0.1px;}
 	.grid-view .card-s .cat {top: 6px; left: 6px; font-size: 11px;}
 	.grid-view .card-s.video > a::before, .grid-view .card-s.video > a::after {display:none}
 
