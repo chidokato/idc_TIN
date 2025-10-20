@@ -12,13 +12,13 @@
                         </div>
                         <span class="ft-contact-item-ico"><i class="icon-phone-filled"></i></span>
                     </div>
-                    <div class="ft-contact-item">
+                    <!-- <div class="ft-contact-item">
                         <div class="ft-contact-item-text">
                             <h6>Head Office</h6>
                             <span>Tầng 5 tòa nhà Vạn Gia Phát, Số 1 Trần Khánh Dư, Phường Tân Định, Thành Phố Hồ Chí Minh, Việt Nam</span>
                         </div>
                         <span class="ft-contact-item-ico"><i class="icon-building-filled"></i></span>
-                    </div>
+                    </div> -->
                     <div class="ft-contact-item">
                         <div class="ft-contact-item-text">
                             <h6>Office Address</h6>
