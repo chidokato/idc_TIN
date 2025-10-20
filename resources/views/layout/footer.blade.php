@@ -43,7 +43,7 @@
                     
                     <div class="col-md-6">
                         <div class="ft-link">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15676.90695339032!2d106.6893047!3d10.7939386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528cdeb13ffff%3A0x8db7b80bb49f4899!2zQ8O0bmcgVHkgQ-G7lSBQaOG6p24gQuG6pXQgxJDhu5luZyBT4bqjbiBJbmRvY2hpbmU!5e0!3m2!1svi!2s!4v1718358591174!5m2!1svi!2s" style="border:0; width: 100%; height: 300px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4690.512692187741!2d106.7229934!3d10.7484217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fb2f3dfc163%3A0x51a07369e53958f4!2sIndochine%20Coffee!5e1!3m2!1svi!2s!4v1760953283108!5m2!1svi!2s" width="600" height="450" style="border:0; width: 100%; height: 300px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
