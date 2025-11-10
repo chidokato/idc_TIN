@@ -274,7 +274,8 @@
                 <div class="info">
                     <div class="img mb-4"> <img style="height: 350px;" src="assets/images/gioithieu/tin.png"> </div>
                     <div class="name">Ông. PHẠM TRUNG TÍN</div>
-                    <!-- <div class="function"> Chief Executive Officer <br> INDOCHINE Real Estate Joint Stock Company </div> -->
+                    <div class="function"> MBA Certificate Holder <br> Director ....
+ </div>
                 </div>
             </div>
         </div>
