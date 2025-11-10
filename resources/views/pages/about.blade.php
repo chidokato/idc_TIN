@@ -265,7 +265,7 @@
                     <div class="timeline-entry">
                         <div class="timeline-time">2021-2025</div>
                         <div class="timeline-content">
-                            <p>MBA – Director of Domestic and International Sales, Ho Chi Minh City Branch</p>
+                            <p>MBA – Director of Domestic and International Sales, Indochine Real Estate Joint Stock Company - Ho Chi Minh City Branch</p>
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@
                 <div class="info">
                     <div class="img mb-4"> <img style="height: 350px;" src="assets/images/gioithieu/tin.png"> </div>
                     <div class="name">Ông. PHẠM TRUNG TÍN</div>
-                    <div class="function"> MBA Certificate Holder <br> Director ....
+                    <div class="function"> MBA Certificate Holder <br> Sale & Digital Marketing Director
  </div>
                 </div>
             </div>
