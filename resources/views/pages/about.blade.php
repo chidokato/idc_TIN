@@ -206,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="row haianh" style="background:url(assets/images/gioithieu/bg_lanhdao2.png); background-size: cover;">
+        <div class="row haianh pb-5" style="background:url(assets/images/gioithieu/bg_lanhdao2.png); background-size: cover;">
             <div class="col-md-2"></div>
             <div class="col-md-4">
                 <div class="info">
@@ -239,6 +239,46 @@
             </div>
             
         </div>
+
+        <div class="row hangle mt-5" style="background:url(assets/images/gioithieu/bg_lanhdao1.png); background-size: cover;">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div class="timeline">
+                    <div class="timeline-entry">
+                        <div class="timeline-time">2009 - 2016</div>
+                        <div class="timeline-content">
+                            <p>Former Student of Financial Management and Business Administration – Kaplan University Singapore</p>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-time">2016 - 2018</div>
+                        <div class="timeline-content">
+                            <p>Co-Founder of Dung Thao Trading Ltd, a Building Materials Company</p>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-time">2019 - 2020</div>
+                        <div class="timeline-content">
+                            <p>Head of International Sales Department at Dat Xanh Mien Bac Real Estate Company</p>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-time">2021-2025</div>
+                        <div class="timeline-content">
+                            <p>MBA – Director of Domestic and International Sales, Ho Chi Minh City Branch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info">
+                    <div class="img mb-4"> <img style="height: 350px;" src="assets/images/gioithieu/tin.png"> </div>
+                    <div class="name">Phạm Trung Tín</div>
+                    <!-- <div class="function"> Chief Executive Officer <br> INDOCHINE Real Estate Joint Stock Company </div> -->
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
 </div>
