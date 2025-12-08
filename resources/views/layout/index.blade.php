@@ -95,6 +95,8 @@
     </div>
     @endif
 
+    {!! $setting->footer !!}
+
 </body>
 
 </html>
