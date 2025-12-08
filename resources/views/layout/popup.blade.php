@@ -44,7 +44,7 @@
         </div>
     
     <div class="hotline-bar">
-        <a href="https://line.me/ti/p/yQJQunMFQD">
+        <a target="_blank" href="https://line.me/ti/p/yQJQunMFQD">
             <span class="text-hotline">Call Now</span>
         </a>
     </div>
