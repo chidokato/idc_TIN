@@ -125,7 +125,6 @@ class PostController extends Controller
         $post->wc = $data['wc'];
         $post->wc_max = $data['wc_max'];
         $post->total_product = $data['total_product'];
-        $post->maps = $data['maps'];
         
         $post->province_id = $data['province'];
         $post->district_id = $data['district'];
