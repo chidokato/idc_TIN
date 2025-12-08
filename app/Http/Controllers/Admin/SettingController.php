@@ -50,6 +50,7 @@ class SettingController extends Controller
         $setting->header = $data['header'];
         $setting->footer = $data['footer'];
         $setting->hotline = $data['hotline'];
+        $setting->chat = $data['chat'];
         $setting->email = $data['email'];
         $setting->facebook = $data['facebook'];
         $setting->youtube = $data['youtube'];

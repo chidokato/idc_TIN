@@ -20,7 +20,7 @@
         <div class="hotline-phone-ring-circle"></div>
         <div class="hotline-phone-ring-circle-fill"></div>
         <div class="hotline-phone-ring-img-circle">
-        <a target="_blank" href="https://zalo.me/{{$setting->hotline}}" class="pps-btn-img">
+        <a target="_blank" href="{{$setting->chat}}" class="pps-btn-img">
             <img src="assets/img/icon/zalo.png" alt="Gọi điện thoại" width="50">
         </a>
         </div>

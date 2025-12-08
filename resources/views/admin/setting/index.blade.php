@@ -141,16 +141,16 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <!-- <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Tỉ giá Yên Nhật (¥1 = ₫...)</label>
-                            <input value="{{$data->exchange}}" name="exchange" placeholder="..." type="text" class="form-control">
-                        </div>
-                    </div> -->
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>hotline</label>
                             <input value="{{$data->hotline}}" name="hotline" placeholder="..." type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Chat</label>
+                            <input value="{{$data->chat}}" name="chat" placeholder="..." type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
