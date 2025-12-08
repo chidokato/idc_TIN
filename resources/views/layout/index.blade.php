@@ -61,6 +61,8 @@
 
     @yield('css')
     
+    {!! $setting->header !!}
+
 </head>
 
 <body>
