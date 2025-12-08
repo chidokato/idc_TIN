@@ -275,7 +275,7 @@
                     <div class="img mb-4"> <img style="height: 350px;" src="assets/images/gioithieu/tin.png"> </div>
                     <div class="name">Ông. PHẠM TRUNG TÍN</div>
                     <div class="function"> MBA Certificate Holder <br> Sale & Digital Marketing Director
- </div>
+                    </div>
                 </div>
             </div>
         </div>
