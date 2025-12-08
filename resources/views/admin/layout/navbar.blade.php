@@ -59,31 +59,11 @@
                 <a class="collapse-item" href="{{route('menu.index')}}">Menu</a>
                 <!-- <a class="collapse-item" href="{{route('option.index')}}">Tùy chọn</a> -->
                 <a class="collapse-item" href="{{route('slider.show', 'slider')}}">Slider</a>
-                <a class="collapse-item" href="{{route('slider.show', 'banner')}}">Banner</a>
+                <a class="collapse-item" href="{{route('option.index')}}">Option</a>
             </div>
         </div>
     </li>
    
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="admin/messages/list"><i class="fas fa-fw fa-chart-area"></i><span>Messages</span></a>
-    </li> -->
-    
-    <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#giaydep"
-            aria-expanded="true" aria-controls="giaydep">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Quản lý giày dép</span>
-        </a>
-        <div id="giaydep" class="collapse" aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="admin/quanlykho/list">Tồn kho</a>
-                <a class="collapse-item" href="admin/nhaphang/list">Nhập hàng</a>
-                <a class="collapse-item" href="admin/banhang/list">Bán hàng</a>
-                <a class="collapse-item" href="admin/giaydep/list">option</a>
-            </div>
-        </div>
-    </li> -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">

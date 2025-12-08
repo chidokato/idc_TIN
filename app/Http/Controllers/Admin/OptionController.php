@@ -23,8 +23,42 @@ class OptionController extends Controller
      */
     public function index()
     {
-        $option = Option::orderBy('view', 'asc')->get();
-        return view('admin.option.index', compact('option'));
+        $parents = Option::where('parent', 0)->get();
+
+        $children = Option::where('parent', '!=', 0)->get()->groupBy('parent');
+
+        return view('admin.option.index', compact(
+            'parents',
+            'children'
+        ));
+    }
+
+    public function save(Request $request)
+    {
+        // Nếu có ID thì update, không có thì tạo mới
+        $option = Option::find($request->id) ?? new Option();
+
+        // Upload hình
+        if ($request->hasFile('img')) {
+            $file = $request->file('img');
+            $filename = time() . '_' . Str::random(8) . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/options'), $filename);
+            $option->img = $filename;
+        }
+
+        // Lưu các field còn lại
+        $option->name = $request->name;
+        $option->color = $request->color;
+        $option->color_1 = $request->color_1;
+        $option->parent = $request->parent;
+
+        $option->save();
+
+        return response()->json([
+            'status' => 'success',
+            'id'     => $option->id,
+            'message' => 'Saved successfully'
+        ]);
     }
 
     /**
@@ -50,24 +84,8 @@ class OptionController extends Controller
         $data = $request->all();
         $option = new Option();
         $option->user_id = Auth::User()->id;
-        $option->status = 'true';
-        $option->category_id = $data['category_id'];
-        $option->view = $data['view'];
-        $option->parent = $data['parent'];
         $option->name = $data['name'];
-        $option->content = $data['content'];
-        $option->title = $data['title'];
-        $option->description = $data['description'];
-        $option->slug = Str::slug($data['name'], '-');
-
-        // if ($request->hasFile('img')) {
-        //     $file = $request->file('img');
-        //     $filename = $file->getClientOriginalName();
-        //     while(file_exists("data/option/".$filename)){$filename = rand(0,99)."_".$filename;}
-        //     $file->move('data/option', $filename);
-        //     $option->img = $filename;
-        // }
-
+        $option->parent = 0;
         $option->save();
         return redirect('admin/option')->with('success','updated successfully');
     }
@@ -81,14 +99,6 @@ class OptionController extends Controller
     public function show($id)
     {
 
-    }
-
-    public function double($id)
-    {
-        $data = Option::find($id);
-        $option = Option::get();
-        $category = Category::get();
-        return view('admin.option.double', compact('data', 'option', 'category'));
     }
 
     /**
@@ -154,4 +164,7 @@ class OptionController extends Controller
         Option::find($id)->delete();
         return redirect()->back();
     }
+
+
+    
 }

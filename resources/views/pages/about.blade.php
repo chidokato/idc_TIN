@@ -58,12 +58,12 @@
                     <h2>Leading Real Estate Developer & Distributor</h2>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-02.png"></div>
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-03.png"></div>
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-04.png"></div>
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-05.png"></div>
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-06.png"></div>
-                            <div class="swiper-slide"><img src="assets/images/gioithieu/quymo-07.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/1.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/2.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/3.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/4.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/5.png"></div>
+                            <div class="swiper-slide"><img src="assets/images/gioithieu/6.png"></div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>

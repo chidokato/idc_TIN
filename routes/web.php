@@ -94,7 +94,7 @@ Route::middleware(['admin'])->group(function () {
         Route::resource('cart',CartController::class);
 
         Route::resource('option',OptionController::class);
-        Route::get('option/double/{id}', [OptionController::class, 'double']);
+        Route::post('/option/save', [OptionController::class, 'save'])->name('option.save');
 
         Route::resource('post',PostController::class);
         Route::resource('news',NewsController::class);

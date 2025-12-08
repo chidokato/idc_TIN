@@ -32,7 +32,6 @@
             <div class="card-header d-flex flex-row align-items-center justify-content-between">
                 <ul class="nav nav-pills">
                     <li><a data-toggle="tab" class="nav-link active" href="#vi">Nội dung</a></li>
-                    
                 </ul>
             </div>
             <div class="tab-content overflow">
@@ -45,24 +44,6 @@
                                   <input name="name" placeholder="Tên danh mục" type="text" class="form-control">
                               </div>
                           </div>
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label>Content</label>
-                                  <textarea name="content" class="form-control" id="ckeditor"></textarea>
-                              </div>
-                          </div>
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label>Title</label>
-                                  <input name="title" placeholder="Tiêu đề SEO" type="text" class="form-control">
-                              </div>
-                          </div>
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label>Description</label>
-                                  <input name="description" placeholder="Mô tả SEO" type="text" class="form-control">
-                              </div>
-                          </div>
                       </div>
                   </div>
                 </div>
@@ -70,77 +51,6 @@
             
         </div>
     </div>
-    <div class="col-xl-3 col-lg-3">
-      <div class="card shadow mb-4">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Option</h6>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="">Danh mục</label>
-                            <select id="parent" name='category_id' class="form-control select2">
-                            <option value="0">--Root--</option>
-                            <?php addeditcat ($category,0,$str='',old('parent')); ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="">Root</label>
-                            <select id="parent" name='parent' class="form-control select2">
-                            <option value="0">--Root--</option>
-                            <?php addeditcat ($option,0,$str='',old('parent')); ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                          <label>View</label>
-                          <input name="view" placeholder="View" type="text" class="form-control">
-                      </div>
-                    </div>
-                  
-              </div>
-            </div>
-
-        </div>
-        <!-- <div class="card shadow mb-4">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Images</h6>
-            </div>
-            <div class="card-body">
-                <div class="file-upload">
-                    <div class="file-upload-content" onclick="$('.file-upload-input').trigger( 'click' )">
-                        <img class="file-upload-image" src="data/no_image.jpg" />
-                    </div>
-                    <div class="image-upload-wrap">
-                        <input name="img" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                    </div>
-                </div>
-            </div>
-
-        </div> -->
-      </div>
 </div>
 </form>
-
-<?php 
-    function addeditcat ($data, $parent=0, $str='',$select=0)
-    {
-        foreach ($data as $value) {
-            if ($value['parent'] == $parent) {
-                if($select != 0 && $value['id'] == $select )
-                { ?>
-                    <option value="<?php echo $value['id']; ?>" selected> <?php echo $str.$value['name']; ?> </option>
-                <?php } else { ?>
-                    <option value="<?php echo $value['id']; ?>" > <?php echo $str.$value['name']; ?> </option>
-                <?php }
-                
-                addeditcat ($data, $value['id'], $str.'___',$select);
-            }
-        }
-    }
-?>
 @endsection

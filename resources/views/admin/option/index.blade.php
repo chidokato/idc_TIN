@@ -14,80 +14,104 @@
         <div class="card shadow mb-4">
             <div class="card-header d-flex flex-row align-items-center justify-content-between">
                 <ul class="nav nav-pills">
-                    <li><a data-toggle="tab" class="nav-link active" href="#tab1">{{__('lang.all')}}</a></li>
-                    <!-- <li><a data-toggle="tab" class="nav-link " href="#tab2">Hiển thị</a></li> -->
-                    <!-- <li><a data-toggle="tab" class="nav-link" href="#tab3">Ẩn</a></li> -->
+                    @foreach($parents as $key => $parent)
+                    <li><a data-toggle="tab" class="nav-link @if($key == 0) active @endif" href="#tab{{$key}}">{{ $parent->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="tab-content overflow">
-                <div class="tab-pane active" id="tab2">
-                    @if(count($option) > 0)
+                @foreach($parents as $key => $parent)
+                <div class="tab-pane @if($key == 0) active @endif" id="tab{{$key}}">
+
                     <table class="table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Name</th>
-                                    <th>Sku</th>
-                                    <th>Category</th>
-                                    <th>Slug</th>
-                                    <th>View</th>
-                                    <th>Status</th>
-                                    <th>User</th>
-                                    <th>date</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php dequycategory ($option,0,$str='',old('parent')); ?>  
-                            </tbody>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Color</th>
+                                <th>Color 1</th>
+                                <th>Img</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        @if(isset($children[$parent->id]))
+                        @foreach($children[$parent->id] as $val)
+                        <tr>
+                            <input type="hidden" class="option-id" value="{{ $val->id ?? '' }}">
+
+                            <td><input class="form-control auto-submit" type="text" name="name" value="{{ $val->name }}" placeholder="name"></td>
+                            <td><input class="form-control auto-submit" type="text" name="color" value="{{ $val->color }}" placeholder="color"></td>
+                            <td><input class="form-control auto-submit" type="text" name="color_1" value="{{ $val->color_1 }}" placeholder="color"></td>
+
+                            <td>
+                                <input class="form-control auto-submit" type="file" name="img">
+                                @if(!empty($val->img))
+                                    <img src="{{ asset('uploads/options/'.$val->img) }}" width="60">
+                                @endif
+                            </td>
+                        </tr>
+                        @endforeach
+                        @endif
+
+                        <tr>
+                            <input type="hidden" class="option-id" value="">
+                            <input type="hidden" class="parent-id" value="{{ $parent->id }}">
+
+                            <td><input class="form-control auto-submit" type="text" name="name" placeholder="name"></td>
+                            <td><input class="form-control auto-submit" type="text" name="color" placeholder="color"></td>
+                            <td><input class="form-control auto-submit" type="text" name="color_1" placeholder="color"></td>
+                            <td><input class="form-control auto-submit" type="file" name="img"></td>
+                        </tr>
+                        
+                        </tbody>
+
                     </table>
-                    @endif
+
                 </div>
-                
+                @endforeach
             </div>
         </div>
     </div>
 </div>
+@endsection
 
-<?php 
-    function dequycategory ($menulist, $parent=0, $str='')
-    {
-        foreach ($menulist as $val) 
-        {
-            if ($val['parent'] == $parent) 
-            { 
-                ?>
-                    <tr id="option" style="border-bottom: 1px solid #f3f6f9;">
-                        <input type="hidden" name="id" id="id" value="{{$val->id}}" >
-                        <!-- <td>
-                            <label class="container"><input type="checkbox" name="foo[]" value="{{$val->id}}"><span class="checkmark"></span></label>
-                        </td> -->
-                        <td>{!! isset($val->img) ? '<img data-action="zoom" src="data/option/'.$val->img.'" class="thumbnail-img align-self-end" alt="">' : '' !!}</td>
-                        <td><a href="{{route('option.edit',[$val->id])}}">{{$str}}{{$val->name}}</a></td>
-                        <td>{{$val->sku}}</td>
-                        <td>{{$val->category->name}}</td>
-                        <td>{{$val->slug}}</td>
-                        <td><input type="text" id="view" value="{{$val->view}}" name="" class="form-control cat_view"></td>
-                        <td>
-                            <label class="container"><input <?php if($val->status == 'true'){echo "checked";} ?> type="checkbox" id='status' ><span class="checkmark"></span></label>
-                        </td>
-                        <td>{{$val->user->name}}</td>
-                        <td class="date">{{date('d/m/Y',strtotime($val->created_at))}} <sup title="Sửa lần cuối: {{date('d/m/Y',strtotime($val->updated_at))}}"><i class="fa fa-question-circle-o" aria-hidden="true"></i></sup> </td>
-                        <td style="display: flex;">
-                            <a href="admin/option/double/{{$val->id}}" class="mr-3"><i class="far fa-copy"></i></a>
-                            <a href="{{route('option.edit',[$val->id])}}" class="mr-2"><i class="fas fa-edit" aria-hidden="true"></i></a>
-                            <form action="{{route('option.destroy', [$val->id])}}" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <button class="button_none" onclick="return confirm('Bạn muốn xóa bản ghi ?')"><i class="fas fa-trash-alt"></i></button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php
-                dequycategory ($menulist, $val['id'], $str.'_');
+@section('js')
+
+<script>
+    $(document).on('blur change', '.auto-submit', function () {
+
+        let row = $(this).closest('tr');
+        let formData = new FormData();
+
+        let id = row.find('.option-id').val();
+        let parent_id = row.find('.parent-id').val();
+
+        if (id) formData.append('id', id);
+        formData.append('parent', parent_id);
+
+        row.find('input').each(function() {
+            if (this.type === 'file') {
+                if (this.files.length > 0) {
+                    formData.append(this.name, this.files[0]);
+                }
+            } else {
+                formData.append(this.name, $(this).val());
             }
-        }
-    }
-?>
+        });
+
+        $.ajax({
+            url: "{{ route('option.save') }}",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(res){
+                row.find('.option-id').val(res.id); // cập nhật khi tạo mới
+                console.log('Saved OK');
+            }
+        });
+    });
+
+</script>
 
 @endsection

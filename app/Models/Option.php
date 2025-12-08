@@ -8,16 +8,32 @@ use Illuminate\Database\Eloquent\Model;
 class Option extends Model
 {
     use HasFactory;
-    public $timestamps = true;
+    protected $table = 'options';
+    protected $fillable = [
+        'parent',
+        'name',
+        'color',
+        'color_1',
+        'img'
+    ];
+
 
     public function User()
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
 
-    public function Category()
+
+    public function children()
     {
-        return $this->hasOne(Category::class, 'id', 'category_id');
+        return $this->hasMany(Option::class, 'parent', 'id');
     }
+
+    public function parentOption()
+    {
+        return $this->belongsTo(Option::class, 'parent', 'id');
+    }
+
+    
 
 }
