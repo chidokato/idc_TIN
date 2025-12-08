@@ -44,7 +44,7 @@
         </div>
     
     <div class="hotline-bar">
-        <a href="tel:{{$setting->hotline}}">
+        <a href="https://line.me/ti/p/yQJQunMFQD">
             <span class="text-hotline">Call Now</span>
         </a>
     </div>
