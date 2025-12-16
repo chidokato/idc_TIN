@@ -164,6 +164,9 @@ header nav li.notification .message i {
 .col-lg-3 .toggle-nv {bottom:initial;top: 54px;position:fixed;width: 48px;height: 48px;z-index: 1000;display: flex;justify-content: center;align-items: center;border-radius: 0 0 0 0.45rem;transform: none;background: rgb(13 70 120);transition: all .3s;}
 .col-lg-3 .toggle-nv.active {right: 64%;}
 
+.language img{ border-radius:0 !important; height:22px !important; margin-top:4px }
+.language .dropdown-menu{ top:45px !important; padding-left:1rem; left:-1rem }
+
 @media (min-width: 768px) {
   header .container {max-width: 100%;}
   
