@@ -15,3 +15,11 @@ document.getElementById('popup-banggia').addEventListener('click', function(e) {
     }
 });
 
+// Tự động mở popup sau 28 giây
+setTimeout(function () {
+    var popup = document.getElementById('popup-banggia');
+    if (popup) {
+        popup.style.display = 'flex';
+    }
+}, 15000);
+

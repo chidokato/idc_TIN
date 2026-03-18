@@ -1,3 +1,25 @@
+<!--  <div class="hotline-phone-ring-wrap form-ring-wrap">
+    <div class="hotline-phone-ring ">
+        <div class="hotline-phone-ring-circle"></div>
+        <div class="hotline-phone-ring-circle-fill"></div>
+        <div class="hotline-phone-ring-img-circle click_wechat">
+            <a href="javascript:void(0)" class="pps-btn-img">
+                <img style="width: 35px;height: 35px;border-radius: 100%;" src="assets/img/icon/wechat.png" alt="Gọi điện thoại" width="50">
+            </a>
+        </div>
+        <div class="hotline-bar click_wechat">
+            <a href="javascript:void(0)">
+                <span class="text-hotline">Wechat</span>
+            </a>
+        </div>
+    </div>
+    <div class="wechat-mini-popup" id="wechatMiniPopup">
+        <img src="assets/img/icon/wechat-qr.jpg" alt="WeChat QR">
+        <p>ID: xiaoyan999</p>
+    </div>
+</div>   -->                             
+
+
 <div class="hotline-phone-ring-wrap form-ring-wrap">
     <div class="hotline-phone-ring ">
         <div class="hotline-phone-ring-circle"></div>
@@ -60,13 +82,13 @@
         @csrf
             <input type="hidden" id="current-url" name="url" value="">
             <label>
-                <input type="text" name="name" placeholder="Full Name (*)">
+                <input type="text" name="name" placeholder="Full Name (*)" required>
             </label>
             <label>
-                <input type="text" name="phone" placeholder="Phone (*)">
+                <input type="email" name="email" placeholder="Email (*)" required>
             </label>
             <label>
-                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="wechat" placeholder="Wechat/Kakaotalk ID (*)" required>
             </label>
             <p class="sub">(*) By clicking on ‘Request a Quote’, you agree to our Privacy Policy.</p>
             <button class="btn btn-circle" type="submit">Send Now</button>
@@ -82,3 +104,26 @@
         }
     });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const btns = document.querySelectorAll('.click_wechat');
+    const popup = document.getElementById('wechatMiniPopup');
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            popup.style.display = 
+                popup.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // Click ra ngoài thì ẩn
+    document.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+});
+</script>
+

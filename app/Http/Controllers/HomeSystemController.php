@@ -37,7 +37,7 @@ class HomeSystemController extends Controller
     public function question(Request $request){
         $Customer = new Customer();
         $Customer->name = $request->name;
-        $Customer->phone = $request->phone;
+        $Customer->phone = $request->wechat ?? $request->phone;
         $Customer->email = $request->email;
         $Customer->title = $request->url;
         $Customer->content = $request->content;

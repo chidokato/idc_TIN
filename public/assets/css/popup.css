@@ -54,3 +54,53 @@
 .popup-content form>label{ width:100%; position:relative; }
 .popup-content form label.error{ position:absolute; top:11px; right:12px; color:red; font-size:.8rem }
 .popup-content form input.error{ border:1px solid red; }
+
+
+
+/* Mini popup */
+.wechat-mini-popup {
+    position: absolute;
+    bottom: 100px; /* nổi lên trên nút */
+    left: 20px;
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    display: none;
+    animation: fadeUp .25s ease;
+}
+
+.wechat-mini-popup img {
+    width: 140px;
+    height: auto;
+}
+
+.wechat-mini-popup p {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Mũi tên chỉ xuống nút */
+.wechat-mini-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 30px;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
